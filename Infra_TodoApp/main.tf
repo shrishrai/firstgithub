@@ -5,6 +5,18 @@ module "resource_group" {
   resource_group_location = "centralindia"
 
 }
+module "resource_group1" {
+  source                  = "../module/azurerm_resource_group"
+  resource_group_name     = "shrish2"
+  resource_group_location = "centralindia"
+
+}
+odule "resource_group2" {
+  source                  = "../module/azurerm_resource_group"
+  resource_group_name     = "shrish3"
+  resource_group_location = "centralindia"
+
+}
 # virtual network
 module "virtual_network" {
   depends_on               = [module.resource_group]
